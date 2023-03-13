@@ -3,28 +3,30 @@ import org.canhdevsecops.MavenJavaPipeline
 def call(javaVersion) {
     def pipeline = new MavenJavaPipeline(javaVersion)
 
-    stages {
-        stage('Build') {
-            agent(
-                docker {
-                    image "3.8-openjdk-${javaVersion}-slim"
+    node {
+        stages {
+            stage('Build') {
+                agent(
+                    docker {
+                        image "3.8-openjdk-${javaVersion}-slim"
+                    }
+                )
+                steps {
+                    pipeline.build()
                 }
-            )
-            steps {
-                pipeline.build()
             }
         }
-    }
 
-    stages {
-        stage('Build') {
-            agent(
-                docker {
-                    image "3.8-openjdk-${javaVersion}-slim"
+        stages {
+            stage('Build') {
+                agent(
+                    docker {
+                        image "3.8-openjdk-${javaVersion}-slim"
+                    }
+                )
+                steps {
+                    pipeline.test()
                 }
-            )
-            steps {
-                pipeline.test()
             }
         }
     }
