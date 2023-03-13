@@ -1,5 +1,5 @@
 package org.canhdevsecops
-class MavenJavaPipeline {
+class MavenJavaPipeline implements Serializable {
     
     def javaVersion;
 
