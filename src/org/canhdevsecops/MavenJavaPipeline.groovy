@@ -3,7 +3,7 @@ class MavenJavaPipeline implements Serializable {
     
     def javaVersion;
 
-    private MavenJavaPipeline(javaVersion) {
+    MavenJavaPipeline(javaVersion) {
         this.javaVersion = javaVersion
     }
 
