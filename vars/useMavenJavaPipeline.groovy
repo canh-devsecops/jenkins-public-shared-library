@@ -1,4 +1,4 @@
-import src.org.canhdevsecops.MavenJavaPipeline
+import org.canhdevsecops.MavenJavaPipeline
 
 def call(javaVersion) {
     def pipeline = MavenJavaPipeline(javaVersion)
