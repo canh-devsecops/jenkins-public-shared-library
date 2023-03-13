@@ -1,10 +1,10 @@
 package org.canhdevsecops
 class MavenJavaPipeline implements Serializable {
     
-    def javaVersion;
+    def steps;
 
-    MavenJavaPipeline(javaVersion) {
-        this.javaVersion = javaVersion
+    MavenJavaPipeline(steps) {
+        this.steps = steps
     }
 
     def build() {

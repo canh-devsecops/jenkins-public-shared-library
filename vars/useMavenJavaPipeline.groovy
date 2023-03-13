@@ -1,7 +1,7 @@
 import org.canhdevsecops.MavenJavaPipeline
 
 def call(String javaVersion) {
-    def pipeline = new MavenJavaPipeline(javaVersion)
+    def pipeline = new MavenJavaPipeline(this)
 
     pipeline {
         stages {
