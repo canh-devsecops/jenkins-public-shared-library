@@ -8,11 +8,11 @@ class MavenJavaPipeline implements Serializable {
     }
 
     def build() {
-        sh 'mvn -v'
-        sh 'mvn clean package'
+        steps.sh 'mvn -v'
+        steps.sh 'mvn clean package'
     }
 
     def test() {
-        sh 'mvn test'
+        steps.sh 'mvn test'
     }
 }
