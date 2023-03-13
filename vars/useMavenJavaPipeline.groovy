@@ -3,7 +3,7 @@ import org.canhdevsecops.MavenJavaPipeline
 def call(javaVersion) {
     def pipeline = new MavenJavaPipeline(javaVersion)
 
-    node {
+    pipeline {
         stages {
             stage('Build') {
                 agent(
