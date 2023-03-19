@@ -1,7 +1,10 @@
+#!/usr/bin/env groovy
+
 package org.canhdevsecops
+
 class MavenJavaPipeline implements Serializable {
     
-    def steps;
+    def steps
 
     MavenJavaPipeline(steps) {
         this.steps = steps

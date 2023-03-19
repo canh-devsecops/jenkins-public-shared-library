@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 import org.canhdevsecops.MavenJavaPipeline
 
 def call(String javaVersion) {
@@ -12,7 +14,7 @@ def call(String javaVersion) {
                     }
                 )
                 steps {
-                    pipeline.build()
+                    pipeline.build
                 }
             }
         }
@@ -25,7 +27,7 @@ def call(String javaVersion) {
                     }
                 )
                 steps {
-                    pipeline.test()
+                    pipeline.test
                 }
             }
         }
