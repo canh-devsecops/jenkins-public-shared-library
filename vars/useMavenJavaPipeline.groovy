@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
-import org.canhdevsecops.MavenJavaPipeline
+import org.canhdevsecops.MavenPipelineBuilder
 
 def call(String javaVersion) {
-    def pipeline = new MavenJavaPipeline(this)
+    def builder = new MavenPipelineBuilder(this)
 
     pipeline {
         agent any
@@ -16,7 +16,7 @@ def call(String javaVersion) {
                     }
                 }
                 steps {
-                    pipeline.build
+                    builder.build
                 }
             }
 
@@ -27,7 +27,7 @@ def call(String javaVersion) {
                     }
                 }
                 steps {
-                    pipeline.test
+                    builder.test
                 }
             }
         }
