@@ -2,7 +2,7 @@ package org.canhdevsecops
 
 interface PipelineBuilder {
 
-    def build() {}
+    def build()
 
-    def test() {}
+    def test()
 }
