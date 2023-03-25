@@ -3,7 +3,7 @@
 import org.canhdevsecops.MavenPipelineBuilder
 
 def call(String javaVersion) {
-    def builder = new MavenPipelineBuilder(this)
+    PipelineBuilder builder = new MavenPipelineBuilder(this)
 
     pipeline {
         agent any

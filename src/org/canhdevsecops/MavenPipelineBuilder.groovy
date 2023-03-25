@@ -2,19 +2,19 @@
 
 package org.canhdevsecops
 
-class MavenPipelineBuilder implements Serializable {
-    
-    def steps
+class MavenPipelineBuilder extends AbstractPipelineBuilder {
 
     MavenPipelineBuilder(steps) {
-        this.steps = steps
+        super(steps)
     }
 
+    @Overwrite
     def build() {
         steps.sh 'mvn -v'
         steps.sh 'mvn clean package'
     }
 
+    @Overwrite
     def test() {
         steps.sh 'mvn test'
     }
