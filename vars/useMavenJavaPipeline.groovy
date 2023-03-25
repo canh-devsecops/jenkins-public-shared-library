@@ -16,7 +16,9 @@ def call(String javaVersion) {
                     }
                 }
                 steps {
-                    builder.build()
+                    script {
+                        builder.build()
+                    }
                 }
             }
 
@@ -27,7 +29,9 @@ def call(String javaVersion) {
                     }
                 }
                 steps {
-                    builder.test()
+                    script {
+                        builder.test()
+                    }
                 }
             }
         }
