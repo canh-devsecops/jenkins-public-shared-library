@@ -15,9 +15,7 @@ def call(String javaVersion) {
                         image "maven:3.8-openjdk-${javaVersion}-slim"
                     }
                 }
-                steps {
-                    builder.build()
-                }
+                builder.build()
             }
 
             stage('Test') {
@@ -26,9 +24,7 @@ def call(String javaVersion) {
                         image "maven:3.8-openjdk-${javaVersion}-slim"
                     }
                 }
-                steps {
-                    builder.test()
-                }
+                builder.test()
             }
         }
     }
