@@ -2,11 +2,11 @@
 
 package org.canhdevsecops
 
-class MavenPipeline implements Serializable {
+class MavenPipelineBuilder implements Serializable {
     
     def steps
 
-    MavenJavaPipeline(steps) {
+    MavenPipelineBuilder(steps) {
         this.steps = steps
     }
 
