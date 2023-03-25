@@ -8,13 +8,13 @@ class MavenPipelineBuilder extends AbstractPipelineBuilder {
         super(steps)
     }
 
-    @Overwrite
+    @Override
     def build() {
         steps.sh 'mvn -v'
         steps.sh 'mvn clean package'
     }
 
-    @Overwrite
+    @Override
     def test() {
         steps.sh 'mvn test'
     }

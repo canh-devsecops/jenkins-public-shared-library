@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+import org.canhdevsecops.PipelineBuilder
 import org.canhdevsecops.MavenPipelineBuilder
 
 def call(String javaVersion) {
